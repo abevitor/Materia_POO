@@ -12,6 +12,14 @@ public class ItemPedido {
         this.quantidade = quantidade;
     }
 
+    public void exibirItem(){
+        System.out.println(
+            "Produto: " + produto.getNome()
+            + "Quantidade: " + quantidade
+            + " Subtotal: R$ " + calcularSubtotal()
+        );
+    }
+
     public double calcularSubtotal() {
         return produto.getPreco() * quantidade;
     }

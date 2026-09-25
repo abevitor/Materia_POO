@@ -17,6 +17,17 @@ public class Pedido {
         itens.add(item);
     }
 
+    public void exibirResumo() {
+
+    System.out.println("Cliente: " + cliente.getNome());
+
+    for (ItemPedido item : itens) {
+        item.exibirItem();
+    }
+
+    System.out.println("Total: R$ " + calcularTotal());
+}
+
     public double calcularTotal() {
         double total = 0;
         for (ItemPedido item : itens) {
